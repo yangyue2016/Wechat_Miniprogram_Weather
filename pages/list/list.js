@@ -7,32 +7,13 @@ Page({
   },
 
   onLoad(options) {
-    console.log('onLoad')
-
     this.setData({
       city: options.city
     })
     this.getWeekWeather()
   },
 
-  onHide(){
-    console.log('onHide')
-  },
-
-  onReady(){
-    console.log('onReady')
-  },
-
-  onUnload(){
-    console.log('onUnLoad')
-  },
-
-  onShow(){
-    console.log('onShow')
-  },
-
   onPullDownRefresh() {
-
     this.getWeekWeather(() => {
       wx.stopPullDownRefresh()
     })
